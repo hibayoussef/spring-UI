@@ -44,6 +44,7 @@ export default {
       this.destroyToken()
         .then((response) => {
             console.log(response)
+            this.$router.push("/signin");
         })
         .catch((error) => {
           console.log(error);
