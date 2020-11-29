@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default {
+  namespace: true,
   state: {
     token: localStorage.getItem("accessToken") || null,
   },
@@ -25,18 +26,20 @@ export default {
       if (this.getters.loggedIn) {
         localStorage.removeItem("accessToken");
         commit("destroyToken");
-        this.$router.push("/signin");
       }
     },
 
+
     SIGNUP(userData) {
       return new Promise((resolve, reject) => {
+       const Data = 
+       JSON.stringify({
+        name: userData.name,
+        email: userData.email,
+        password: userData,
+      })
         axios
-          .post(`/signup`, {
-            name: userData.name,
-            email: userData.email,
-            password: userData,
-          })
+          .post(`/signup`, Data)
           .then((res) => {
             console.log(res);
             resolve(res);
@@ -50,11 +53,13 @@ export default {
 
     LOGIN({ commit }, userData) {
       return new Promise((resolve, reject) => {
+        const Data = 
+        JSON.stringify({
+          email: userData.email,
+          password: userData.password,
+       })
         axios
-          .post("/signin", {
-            email: userData.email,
-            password: userData.password,
-          })
+          .post("/signin", Data)
           .then((response) => {
             console.log(response);
             const token = response.data.accessToken;
@@ -63,7 +68,7 @@ export default {
             resolve(response);
           })
           .catch((error) => {
-            console.log("some errors was happened:", error);
+            console.log(error);
             reject(error);
           });
       });

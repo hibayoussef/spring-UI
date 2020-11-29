@@ -10,7 +10,7 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 axios.defaults.baseURL = 'localhost:4000/api/services'
-axios.defaults.headers.common['Authorization'] = 'qwertyuiop'
+axios.defaults.headers.common['Authorization'] = localStorage.getItem("accessToken") ||'accessToken'
 axios.defaults.headers.get['Accepts'] = 'application/json'
 
 const router = new VueRouter({

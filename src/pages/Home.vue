@@ -38,7 +38,6 @@ export default {
     },
   },
   methods: {
-    //   ***********************************************
     ...mapActions(["destroyToken"]),
       onCreated() {
       this.destroyToken()
@@ -50,8 +49,7 @@ export default {
           console.log(error);
         });
     }
-    // *********************************************
-  },
+  }
 };
 </script>
 
