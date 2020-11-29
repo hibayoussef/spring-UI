@@ -27,6 +27,7 @@
                         v-model="name"
                         type="text"
                         color="black"
+                        class="myfont"
                         required
                       >
                         {{ name }}
@@ -43,6 +44,7 @@
                         v-model="email"
                         type="text"
                         color="black"
+                        class="myfont"
                         required
                       >
                         {{ email }}
@@ -59,6 +61,7 @@
                         v-model="password"
                         type="password"
                         color="black"
+                        class="myfont"
                         required
                       >
                         {{ password }}
@@ -68,7 +71,7 @@
 
                   <v-layout row>
                     <v-flex xs12>
-                      <v-btn class="grey darken-4 color">
+                      <v-btn class="grey darken-4 color myfont">
                         Sign up
                       </v-btn>
                     </v-flex>
@@ -124,6 +127,9 @@ export default {
 </script>
 
 <style scoped>
+.myfont {
+  font-family: "Mansalva", cursive;
+}
 .color {
   color: #fafafa;
 }
@@ -141,6 +147,6 @@ export default {
   background: url("https://media.architecturaldigest.com/photos/5ced723e04c41ee04a9a8bfd/master/w_1600%2Cc_limit/Bugatti-LVN-1%252520%25255BBugatti%25255D.jpg")
     no-repeat center center;
   background-size: cover;
-  transform: scale(1.0);
+  transform: scale(1);
 }
 </style>

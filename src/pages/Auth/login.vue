@@ -17,6 +17,7 @@
                         v-model="email"
                         type="text"
                         color="black"
+                        class="myfont"
                         required
                       >
                         {{ email }}
@@ -33,6 +34,7 @@
                         v-model="password"
                         type="password"
                         color="black"
+                        class="myfont"
                         required
                       >
                         {{ password }}
@@ -42,7 +44,7 @@
 
                   <v-layout row>
                     <v-flex xs12>
-                      <v-btn class="grey darken-4 color">
+                      <v-btn class="grey darken-4 color myfont">
                         Sign In
                       </v-btn>
                     </v-flex>
@@ -89,6 +91,10 @@ export default {
 </script>
 
 <style scoped>
+
+.myfont {
+  font-family: "Mansalva", cursive;
+}
 .color {
   color: #fafafa;
 }
