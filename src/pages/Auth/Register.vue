@@ -89,8 +89,6 @@ import { mapActions } from "vuex";
 export default {
   data() {
     return {
-
-        userExisted: false,
         name: "",
         email: "",
         password: ""
@@ -118,7 +116,6 @@ export default {
             console.log(res)
           })
           .catch((error) => {
-            this.userExisted = true;
             console.log(error)
           });
     },
