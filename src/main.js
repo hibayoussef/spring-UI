@@ -3,15 +3,16 @@ import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import VueRouter from "vue-router";
 import { routes } from "./routes.js";
-import { store } from './store'
-import axios from 'axios'
+import { store } from "./store";
+import axios from "axios";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
-axios.defaults.baseURL = 'localhost:4000/api/services'
-axios.defaults.headers.common['Authorization'] = localStorage.getItem("accessToken") ||'accessToken'
-axios.defaults.headers.get['Accepts'] = 'application/json'
+axios.defaults.baseURL = "localhost:4000/api/services";
+axios.defaults.headers.common["Authorization"] =
+  "Bearer " + localStorage.getItem("accessToken") || null;
+axios.defaults.headers.get["Accepts"] = "application/json";
 
 const router = new VueRouter({
   routes,

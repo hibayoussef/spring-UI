@@ -9,7 +9,7 @@ export default {
   getters: {
     loggedIn(state) {
       return state.token !== null;
-    }
+    },
   },
 
   mutations: {
@@ -29,15 +29,13 @@ export default {
       }
     },
 
-
     SIGNUP(userData) {
       return new Promise((resolve, reject) => {
-       const Data = 
-       JSON.stringify({
-        name: userData.name,
-        email: userData.email,
-        password: userData,
-      })
+        const Data = JSON.stringify({
+          name: userData.name,
+          email: userData.email,
+          password: userData,
+        });
         axios
           .post(`/signup`, Data)
           .then((res) => {
@@ -53,11 +51,10 @@ export default {
 
     LOGIN({ commit }, userData) {
       return new Promise((resolve, reject) => {
-        const Data = 
-        JSON.stringify({
+        const Data = JSON.stringify({
           email: userData.email,
           password: userData.password,
-       })
+        });
         axios
           .post("/signin", Data)
           .then((response) => {

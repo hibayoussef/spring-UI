@@ -39,17 +39,17 @@ export default {
   },
   methods: {
     ...mapActions(["destroyToken"]),
-      onCreated() {
+    onCreated() {
       this.destroyToken()
         .then((response) => {
-            console.log(response)
-            this.$router.push("/signin");
+          console.log(response);
+          this.$router.push("/signin");
         })
         .catch((error) => {
           console.log(error);
         });
-    }
-  }
+    },
+  },
 };
 </script>
 
