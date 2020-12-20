@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row class="padding">
         <v-flex xs12 sm6 offset-sm3>
-          <v-card>
+          <v-card class="mx-auto mt-5 pa-4 text-center secondary text-no-wrap" max-width="1500" id="limited-products" :style="isShowError ? 'border: 3px solid #D50000;' : 'border: 3px solid #D50000;'">
             <!-- <v-alert color="error" :value="error" icon="close">some Data are Wrong Email or Password </v-alert> -->
             <v-card-text>
               <v-container class="margin">
@@ -16,7 +16,7 @@
                         id="email"
                         v-model="email"
                         type="text"
-                        color="black"
+                        color="#D50000"
                         class="myfont"
                         required
                       >
@@ -32,8 +32,8 @@
                         label="Password"
                         id="password"
                         v-model="password"
-                        type="password"
-                        color="black"
+                        type="text"
+                        color="#D50000"
                         class="myfont"
                         required
                       >
@@ -44,7 +44,7 @@
 
                   <v-layout row>
                     <v-flex xs12>
-                      <v-btn class="grey darken-4 color myfont">
+                      <v-btn class="red accent-4 color myfont">
                         Sign In
                       </v-btn>
                     </v-flex>
@@ -113,7 +113,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("https://c4.wallpaperflare.com/wallpaper/1011/898/396/lamborghini-cool-car-famous-brand-dark-background-black-window-wallpaper-thumb.jpg")
+  background: url("https://wallpaperaccess.com/full/48895.jpg")
     no-repeat center center;
   background-size: cover;
   transform: scale(1.0);

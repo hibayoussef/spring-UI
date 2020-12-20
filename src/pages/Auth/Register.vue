@@ -11,7 +11,7 @@
       <!-- </v-layout> -->
       <v-layout row class="padding">
         <v-flex xs12 sm6 offset-sm3>
-          <v-card>
+          <v-card class="mx-auto mt-5 pa-4 text-center secondary text-no-wrap" max-width="1500" id="limited-products" >
             <!-- <v-alert :value="userExisted" color="error" icon="warning">
               This User already Exists , Try a different set of Data.
             </v-alert> -->
@@ -26,7 +26,7 @@
                         id="name"
                         v-model="name"
                         type="text"
-                        color="black"
+                        color="#D50000"
                         class="myfont"
                         required
                       >
@@ -43,7 +43,7 @@
                         id="email"
                         v-model="email"
                         type="text"
-                        color="black"
+                        color="#D50000"
                         class="myfont"
                         required
                       >
@@ -59,8 +59,8 @@
                         label="Password"
                         id="password"
                         v-model="password"
-                        type="password"
-                        color="black"
+                        type="text"
+                        color="#D50000"
                         class="myfont"
                         required
                       >
@@ -71,7 +71,7 @@
 
                   <v-layout row>
                     <v-flex xs12>
-                      <v-btn class="grey darken-4 color myfont">
+                      <v-btn class="red accent-4 color myfont">
                         Sign up
                       </v-btn>
                     </v-flex>
@@ -144,7 +144,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background: url("https://media.architecturaldigest.com/photos/5ced723e04c41ee04a9a8bfd/master/w_1600%2Cc_limit/Bugatti-LVN-1%252520%25255BBugatti%25255D.jpg")
+  background: url("https://www.supercars.net/blog/wp-content/uploads/2020/01/Ferrari-F40.jpg")
     no-repeat center center;
   background-size: cover;
   transform: scale(1);
